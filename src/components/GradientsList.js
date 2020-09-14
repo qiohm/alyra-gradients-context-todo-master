@@ -1,9 +1,10 @@
 import React, { useContext } from "react"
-import { gradients } from "./../gradients"
+import { GradientsContext } from "./../context/GradientsContext"
 import Gradient from "./Gradient"
 import { FilterContext } from "./../context/FilterContext"
 
 const GradientsList = (props) => {
+  const {gradients} = useContext(GradientsContext)
   const { filter } = useContext(FilterContext)
   const filteredGradients = gradients.filter((el) => {
     if (filter === "all") {

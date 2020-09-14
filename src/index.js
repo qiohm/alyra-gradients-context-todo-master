@@ -4,10 +4,14 @@ import "bootstrap/dist/css/bootstrap.css"
 import "./index.css"
 import App from "./App"
 import * as serviceWorker from "./serviceWorker"
+import GradientsContextProvider from "./context/GradientsContext"
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <GradientsContextProvider>
     <App />
+    </GradientsContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 )

@@ -1,8 +1,9 @@
-import React, { useState } from "react"
-import { gradients } from "../gradients"
+import React, { useState, useContext } from "react"
+import {GradientsContext} from './../context/GradientsContext'
 
 const GradientsHeader = (props) => {
   const { children } = props
+  const {gradients} = useContext(GradientsContext)
   const length = gradients.length
 
   const chooseGradient = () => Math.floor(Math.random() * length)
